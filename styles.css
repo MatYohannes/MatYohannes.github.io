@@ -14,17 +14,17 @@
 }
 
 #nav-bar .navbar-nav .nav-link {
-    color: #ffffff; 
+    color: #2700d3; 
     font-size: 1.25rem; /* Larger font size */
 }
 
 #nav-bar .navbar-nav .nav-link:hover {
-    color: #ffffff; /* Optional: Change text color on hover */
+    color: #1600a8; /* Optional: Change text color on hover */
 }
 
 /* Navbar Toggler Button Styles */
 #nav-bar .navbar-toggler {
-    border-color: #ffffff; /* Optional: Set border color for the toggler */
+    border-color: #0062a8; /* Optional: Set border color for the toggler */
 }
 
 #nav-bar .navbar-toggler-icon {
