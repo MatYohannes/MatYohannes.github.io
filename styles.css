@@ -1,85 +1,311 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+/* Custom CSS for Sticky Navigation Bar */
+.navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #2200ce;
+    transition: background-color 0.3s ease;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+/* Navbar Styles */
+#nav-bar .navbar {
+    background-color: #1200d7; /* Blue background */
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
+#nav-bar .navbar-nav .nav-link {
+    color: #ffffff; 
+    font-size: 1.25rem; /* Larger font size */
 }
 
-header p {
-    margin: 5px 0;
-    font-size: 1.2em;
+#nav-bar .navbar-nav .nav-link:hover {
+    color: #ffffff; /* Optional: Change text color on hover */
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0;
-    display: flex;
-    justify-content: center;
+/* Navbar Toggler Button Styles */
+#nav-bar .navbar-toggler {
+    border-color: #ffffff; /* Optional: Set border color for the toggler */
 }
 
-nav ul li {
-    margin: 0 10px;
+#nav-bar .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="%23ffffff" class="bi bi-list" viewBox="0 0 16 16"><path d="M0 3.5A.5.5 0 0 1 .5 3h15a.5.5 0 0 1 .5.5v.5a.5.5 0 0 1-.5.5h-15a.5.5 0 0 1-.5-.5v-.5zM0 8a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 .5.5v.5a.5.5 0 0 1-.5.5h-15a.5.5 0 0 1-.5-.5v-.5zM0 12.5A.5.5 0 0 1 .5 12h15a.5.5 0 0 1 .5.5v.5a.5.5 0 0 1-.5.5h-15a.5.5 0 0 1-.5-.5v-.5z"/></svg>');
 }
 
-nav ul li a {
-    color: #fff;
+.navbar a {
+    color: rgb(84, 79, 218);
     text-decoration: none;
 }
-
-section {
-    padding: 20px;
-    margin: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.navbar a:hover {
+    color: #090f49;
+}
+.navbar-nav .nav-item {
+    margin-right: 15px;
+}
+.navbar.scrolled {
+    background-color: #1fc1f2;
+}
+html {
+    scroll-behavior: smooth;
 }
 
-h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 5px 0;
-}
-
-article {
-    margin-bottom: 20px;
-}
-
-article h3 {
-    font-size: 1.5em;
-    margin-bottom: 5px;
-}
-
-a {
-    color: #333;
-    text-decoration: none;
+/* Custom CSS for the About section */
+#about h2 {
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
+.about-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #333;
+}
+
+.about-text {
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+}
+
+/* Custom CSS for the Projects section */
+#projects h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.card-deck .card {
+    min-width: 300px;
+    margin-bottom: 20px;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .card-deck {
+        flex-direction: column;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Custom CSS for the Skills section */
+#skills h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.skills-card img {
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.skills-card .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.skills-card .card-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.skills-card .btn {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .skills-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Custom CSS for the Contact Me section */
+#contact h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+#contact .contact-info {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+#contact .contact-info i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #f8b7d4;
+}
+
+#contact .social-icons a {
+    background-color: #f8b7d4;
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+#contact .social-icons a:hover {
+    background-color: #fff;
+    color: #f8b7d4;
+}
+
+#contact .social-icons a .tooltip-text {
+    display: none;
+    position: absolute;
     background-color: #333;
     color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    top: -40px;
+    white-space: nowrap;
+}
+
+#contact .social-icons a:hover .tooltip-text {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    #contact .contact-info {
+        margin-bottom: 20px;
+    }
+
+    #contact .social-icons a {
+        margin-bottom: 15px;
+    }
+}
+
+/* Project section image under */
+
+#projects {
+    position: relative;
+    overflow: hidden; /* Ensure the fogged image doesn't overflow */
+    padding: 5rem 0; /* Add padding to create space for content */
+}
+
+#projects .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the image behind other content */
+    background-image: url('images/background.jpg'); /* Path to your fogged image */
+    background-size: cover; /* Adjust to cover the entire section */
+    background-position: center; /* Center the background image */
+}
+
+#projects .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Ensure the overlay is above the background image but below the cards */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black layer */
+}
+
+.card-deck {
+    position: relative; /* Ensure cards are positioned above the background image and overlay */
+    z-index: 1; /* Place cards above the background image and overlay */
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for readability */
+    border: none; /* Remove default card border if needed */
+}
+
+/* Ensure all contact icons are circular and properly sized */
+.contact-icon img,
+.social-icons img {
+    width: 1.25cm; /* Set the width to 1 cm */
+    height: 1.25cm; /* Set the height to 1 cm */
+    border-radius: 100%; /* Make the images circular */
+    object-fit: cover; /* Ensure the image covers the circle */
+    display: inline-block; /* Ensure proper alignment */
+    margin: 0.5cm; /* Add some spacing around the images */
+}
+
+/* Optional: Center the icons within their container */
+.contact-icon,
+.social-icons a {
+    display: inline-block;
+    margin: 1cm; /* Add spacing between icons */
+}
+
+
+.card-img-top {
+    object-fit: contain;
+    height: 200px;
+}
+
+.card-img-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%; /* Adjust the aspect ratio (75% for 4:3 ratio) */
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the whole image is visible */
+}
+
+body {
+    padding-top: 56px; /* Adjust this value based on the height of your navbar */
+}
+
+/* Back to Top Button Styles */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff; /* Button color */
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+.back-to-top:hover {
+    background-color: #0056b3; /* Darker color on hover */
+    text-decoration: none;
+    color: white;
 }
