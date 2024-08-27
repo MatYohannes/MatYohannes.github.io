@@ -14,7 +14,7 @@
 }
 
 #nav-bar .navbar-nav .nav-link {
-    color: #2700d3; 
+    color: #ffffff; 
     font-size: 1.25rem; /* Larger font size */
 }
 
@@ -24,7 +24,7 @@
 
 /* Navbar Toggler Button Styles */
 #nav-bar .navbar-toggler {
-    border-color: #0062a8; /* Optional: Set border color for the toggler */
+    border-color: #ffffff; /* Optional: Set border color for the toggler */
 }
 
 #nav-bar .navbar-toggler-icon {
